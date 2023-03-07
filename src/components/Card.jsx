@@ -18,7 +18,7 @@ const Card = (props) => {
       return (
         <>
           <p>Answer: {currentCard.answer}</p>
-          <img className="images" src={currentCard.im} />
+          <img className="images" src={currentCard.image} />
         </>
       );
     }

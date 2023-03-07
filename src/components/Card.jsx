@@ -3,23 +3,23 @@ import { useState } from "react";
 
 const Card = (props) => {
   const [flipped, setFlipped] = useState(false);
-  const [text, setText] = useState("Click to Begin");
   const [cardnum, setCardNum] = useState(0);
+  const currentCard = props.cards[cardnum];
 
   function flipCard() {
     setFlipped(!flipped);
-    displayText();
   }
 
   function getText() {
     if (!flipped) {
-      return "Question: " + currentCard.question;
-    } else {
+      return ("Question: " + currentCard.question);
+    } 
+    else {
       return (
-        <>
+        <div>
           <p>Answer: {currentCard.answer}</p>
           <img className="images" src={currentCard.image} />
-        </>
+        </div>
       );
     }
   }
@@ -39,9 +39,8 @@ const Card = (props) => {
     const randomNumber = Math.floor(Math.random() * props.cards.length);
     setCardNum(randomNumber);
     setFlipped(false);
-    displayText();
   }
-  const currentCard = props.cards[cardnum];
+  
   return (
     <div>
       <div className={`Card ${getDifficulty()}`} onClick={flipCard}>

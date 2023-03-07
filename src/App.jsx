@@ -116,7 +116,7 @@ const App = () => {
       <div class="topbar">
         <h1 class="title1">Chemistry Flashcards</h1>
         <h2 class="title1">Learn Some Cool Chemistry Related Facts!</h2>
-        <h2 class="title1">Number of Cards: 15</h2>
+        <h2 class="title1">Number of Cards: {cards.length}</h2>
       </div>
 
       <Card cards={cards} />

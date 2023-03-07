@@ -20,7 +20,7 @@ The following **optional** features are implemented:
 
 - [X] Cards contains images in addition to or in place of text
 - [X] Cards have different visual styles such as color based on their category
-  - [ ] *Different colored cards depending on the difficulty. Hard cards are red, medium cards are yellow, easy cards are green.*
+  - [X] *Different colored cards depending on the difficulty. Hard cards are red, medium cards are yellow, easy cards are green.*
 
 The following **additional** features are implemented:
 

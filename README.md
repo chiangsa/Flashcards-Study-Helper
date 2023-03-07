@@ -38,9 +38,10 @@ GIF created with ScreenToGif
 ## Notes
 
 Describe any challenges encountered while building the app.
-- I originally had a helper function to change the text of my flashcards. However, it would not update
-properly when going to the next card. I ended up creating a different helper function that returns
-the correct text to be displayed, rather than change the variable responsible for holding the text.
+- I used to display flashcard text depending on a text variable. I had a helper function to change 
+this variable and thus the text on my flashcards. However, it would not update
+properly when clicking "Next". I ended up creating a different helper function that returns
+the text to be displayed, rather than change the variable responsible for holding the text.
 
 ## License
 

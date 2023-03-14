@@ -36,7 +36,7 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    margin: 20px;
+    margin: 10px;
     user-select: none;
     color: white;
 }
@@ -68,4 +68,37 @@ button {
     height: 200px;
     object-fit: cover;
     margin: 10px;
+}
+
+.submit {
+    text-align: center;
+    margin: 20px;
+    user-select: none;
+    border-color: orange;
+}
+
+.input {
+    margin: 10px;
+    border-width: 5px;
+}
+
+.counter {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px;
+    font-family: 'Lucida Sans';
+    user-select: none;
+}
+
+.red {
+    border-color: red;
+}
+
+.black {
+    border-color: black;
+}
+
+.green {
+    border-color: green;
 }

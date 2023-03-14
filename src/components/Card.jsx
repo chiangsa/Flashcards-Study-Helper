@@ -68,6 +68,7 @@ const Card = (props) => {
       }
       setBorderColor("green");
     } else {
+      alert("Streak reset, incorrect answer")
       setIsCorrect(false);
       setCurrentStreak(0);
       setBorderColor("red");
@@ -91,8 +92,12 @@ const Card = (props) => {
     setCardNum(randomNumber);
     setFlipped(false);
     setUserAnswer("");
-    checkAnswer();
     setGuessed(false);
+    if (!guessed) {
+      alert("Streak reset, didn't answer")
+      setCurrentStreak(0);
+    }
+    
   }
 
   function nextCard() {
@@ -100,8 +105,11 @@ const Card = (props) => {
     setCardNum(randomNumber);
     setFlipped(false);
     setUserAnswer("");
-    checkAnswer();
     setGuessed(false);
+    if (!guessed) {
+      alert("Streak reset, didn't answer")
+      setCurrentStreak(0);
+    }
   }
 
   function shuffleCards() {
@@ -111,6 +119,10 @@ const Card = (props) => {
     setCardNum(randomIndex);
     setFlipped(false);
     props.setCards(shuffledCards);
+    if (!guessed) {
+      alert("Streak reset, didn't answer")
+      setCurrentStreak(0);
+    }
   }
   
   function getCurrentStreak() {

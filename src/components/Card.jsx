@@ -10,9 +10,15 @@ const Card = (props) => {
   const [currentStreak, setCurrentStreak] = useState(0);
   const [maxStreak, setMaxStreak] = useState(0);
   const [borderColor, setBorderColor] = useState("black");
+  const [guessed, setGuessed] = useState(false);
 
   function flipCard() {
-    setFlipped(!flipped);
+    if (guessed) {
+      setFlipped(!flipped);
+    }
+    else {
+      alert("Guess at least once")
+    }
   }
 
   function getText() {
@@ -50,6 +56,7 @@ const Card = (props) => {
   }
 
   function checkAnswer() {
+    setGuessed(true);
     if (userAnswer === "") {
       setBorderColor("black");
     }
@@ -85,6 +92,7 @@ const Card = (props) => {
     setFlipped(false);
     setUserAnswer("");
     checkAnswer();
+    setGuessed(false);
   }
 
   function nextCard() {
@@ -93,9 +101,11 @@ const Card = (props) => {
     setFlipped(false);
     setUserAnswer("");
     checkAnswer();
+    setGuessed(false);
   }
 
   function shuffleCards() {
+    setGuessed(false);
     const shuffledCards = props.cards.sort(() => Math.random() - 0.5);
     const randomIndex = Math.floor(Math.random() * shuffledCards.length);
     setCardNum(randomIndex);
